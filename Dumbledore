@@ -1,0 +1,17 @@
+def summ3(x):
+    summ = x // 100 + x % 100 // 10 + x % 10
+    return summ
+ 
+ 
+a = int(input())
+b = int(input())
+cnt = 0
+s = 0
+ 
+for x in range(a, b + 1):
+    if summ3(x // 1000) == summ3(x % 1000):
+      cnt = cnt + 1
+      s = s + x
+ 
+print(s // cnt, cnt)
+ 
