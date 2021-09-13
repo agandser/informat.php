@@ -1,0 +1,16 @@
+a = int(input())
+
+l1 = len(str(a))
+l2 = 10**l1
+l3 = 10**(l1 - 1)
+b = 0
+
+while True:
+	for i in range(a, l2, l3):
+		if i % 3 == 0:
+			b = i
+	if b != a:
+		print(b)
+		break
+	else:
+		l3 = int(l3 / 10)
