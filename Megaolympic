@@ -1,0 +1,26 @@
+a = int(input())
+
+l1 = len(str(a))
+l2 = 10**l1
+l3 = 10**(l1 - 1)
+b = 0
+run = True
+def last():
+    for i in range(0, 10, 1):
+	     if (a // 10 * 10 + i) % 3 == 0 and i != a % 10:
+		       b = (i + a // 10 * 10)
+	print(b)
+
+while run:
+	for i in range(a, l2, l3):
+		if i % 3 == 0:
+			b = i
+		if l3 == 1 and i % 10 == 9 and i == a:
+		    last()
+		    break
+		    
+	if b != a and b != 0:
+	    print(b)
+		break
+	else:
+		l3 = int(l3 / 10)
