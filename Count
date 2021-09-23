@@ -1,0 +1,10 @@
+a = input()
+cnt = {}
+
+for s in a:
+    if s in cnt:
+        cnt[s]+=1
+    else:
+        cnt[s]=1
+        
+print(cnt)
