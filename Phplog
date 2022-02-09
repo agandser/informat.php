@@ -1,0 +1,12 @@
+<?php
+    echo $_POST['name']; 
+    if ($_POST['login'] == 'King'); {
+        if ($_POST['password'] == "007") { 
+            echo ', Привет!';
+        } else {
+            echo "Неправильный пароль";
+        }
+    } else {
+        echo 'Неправильный Логин';
+    }
+?>
