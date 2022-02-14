@@ -1,0 +1,17 @@
+<?php
+$conn = new mysqli("localhost", "root", "", "base1");
+
+if ($conn->connect_error) (
+    die("Ошибка: невозможно подключиться. " . $conn->connect_error);
+   )
+   
+   echo "Подключиться к базе.<br>;
+   §result = $conn->query('INSERT INTO base1.users ( id_user , user_name , user_login , user_pass ) VALUES ( \'\', '.$_POST('user_name').', '.$_POST('user_login').', '.$_POST('user_password').' )');
+   
+   echo "Количество строк: $result->num_rows";
+   
+   $result->close();
+   
+   $conn_>close();
+    
+?>
